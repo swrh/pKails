@@ -1,0 +1,2 @@
+class ProposalStatus < ApplicationRecord
+end

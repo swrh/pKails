@@ -1,0 +1,27 @@
+<%= form_with(model: proposal_status, local: true) do |form| %>
+  <% if proposal_status.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(proposal_status.errors.count, "error") %> prohibited this proposal_status from being saved:</h2>
+
+      <ul>
+      <% proposal_status.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :proposal_status_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :finish %>
+    <%= form.check_box :finish, id: :proposal_status_finish %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

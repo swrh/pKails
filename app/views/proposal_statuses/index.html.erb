@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Proposal Statuses</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Finish</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @proposal_statuses.each do |proposal_status| %>
+      <tr>
+        <td><%= proposal_status.name %></td>
+        <td><%= proposal_status.finish %></td>
+        <td><%= link_to 'Show', proposal_status %></td>
+        <td><%= link_to 'Edit', edit_proposal_status_path(proposal_status) %></td>
+        <td><%= link_to 'Destroy', proposal_status, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Proposal Status', new_proposal_status_path %>
