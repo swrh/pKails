@@ -1,0 +1,27 @@
+<%= form_with(model: indication, local: true) do |form| %>
+  <% if indication.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(indication.errors.count, "error") %> prohibited this indication from being saved:</h2>
+
+      <ul>
+      <% indication.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :who %>
+    <%= form.text_field :who, id: :indication_who %>
+  </div>
+
+  <div class="field">
+    <%= form.label :region_id %>
+    <%= form.text_field :region_id, id: :indication_region_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

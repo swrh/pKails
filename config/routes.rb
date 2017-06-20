@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :indications
   resources :regions
   resources :proposal_statuses
   resources :reasons

@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Who:</strong>
+  <%= @indication.who %>
+</p>
+
+<p>
+  <strong>Region:</strong>
+  <%= @indication.region %>
+</p>
+
+<%= link_to 'Edit', edit_indication_path(@indication) %> |
+<%= link_to 'Back', indications_path %>
