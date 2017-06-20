@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :regions
   resources :proposal_statuses
   resources :reasons
   resources :activities
