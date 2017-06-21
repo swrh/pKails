@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Company:</strong>
+  <%= @representative.company %>
+</p>
+
+<p>
+  <strong>Contact:</strong>
+  <%= @representative.contact %>
+</p>
+
+<p>
+  <strong>Sponsor:</strong>
+  <%= @representative.sponsor %>
+</p>
+
+<%= link_to 'Edit', edit_representative_path(@representative) %> |
+<%= link_to 'Back', representatives_path %>
