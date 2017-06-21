@@ -32,13 +32,11 @@
   </div>
 
   <div class="field">
-    <%= form.label :department_id %>
-    <%= form.text_field :department_id, id: :user_department_id %>
+    <%= form.select :department_id, Department.all.collect { |d| [d.name, d.id] } %>
   </div>
 
   <div class="field">
-    <%= form.label :representative_id %>
-    <%= form.text_field :representative_id, id: :user_representative_id %>
+    <%= form.select :representative_id, Representative.all.collect { |r| [r.company, r.id] } %>
   </div>
 
   <div class="actions">

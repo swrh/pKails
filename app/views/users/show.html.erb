@@ -12,12 +12,12 @@
 
 <p>
   <strong>Department:</strong>
-  <%= @user.department %>
+  <%= @user.department.name %>
 </p>
 
 <p>
   <strong>Representative:</strong>
-  <%= @user.representative %>
+  <%= @user.representative.company %>
 </p>
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
