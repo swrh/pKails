@@ -15,7 +15,7 @@
     <% @indications.each do |indication| %>
       <tr>
         <td><%= indication.who %></td>
-        <td><%= indication.region %></td>
+        <td><%= indication.region.name %></td>
         <td><%= link_to 'Show', indication %></td>
         <td><%= link_to 'Edit', edit_indication_path(indication) %></td>
         <td><%= link_to 'Destroy', indication, method: :delete, data: { confirm: 'Are you sure?' } %></td>

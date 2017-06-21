@@ -17,8 +17,7 @@
   </div>
 
   <div class="field">
-    <%= form.label :region_id %>
-    <%= form.text_field :region_id, id: :indication_region_id %>
+    <%= form.select :region_id, Region.all.collect { |r| [r.name, r.id] } %>
   </div>
 
   <div class="actions">
