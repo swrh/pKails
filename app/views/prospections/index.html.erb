@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Prospections</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Customer</th>
+      <th>Product</th>
+      <th>Value</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @prospections.each do |prospection| %>
+      <tr>
+        <td><%= prospection.customer %></td>
+        <td><%= prospection.product %></td>
+        <td><%= prospection.value %></td>
+        <td><%= link_to 'Show', prospection %></td>
+        <td><%= link_to 'Edit', edit_prospection_path(prospection) %></td>
+        <td><%= link_to 'Destroy', prospection, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Prospection', new_prospection_path %>

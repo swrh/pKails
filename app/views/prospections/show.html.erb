@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Customer:</strong>
+  <%= @prospection.customer %>
+</p>
+
+<p>
+  <strong>Product:</strong>
+  <%= @prospection.product %>
+</p>
+
+<p>
+  <strong>Value:</strong>
+  <%= @prospection.value %>
+</p>
+
+<%= link_to 'Edit', edit_prospection_path(@prospection) %> |
+<%= link_to 'Back', prospections_path %>
