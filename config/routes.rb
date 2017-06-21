@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :customers
   resources :representatives
   resources :indications
   resources :regions
