@@ -15,8 +15,8 @@
   <tbody>
     <% @prospections.each do |prospection| %>
       <tr>
-        <td><%= prospection.customer %></td>
-        <td><%= prospection.product %></td>
+        <td><%= prospection.customer.name %></td>
+        <td><%= prospection.product.name %></td>
         <td><%= prospection.value %></td>
         <td><%= link_to 'Show', prospection %></td>
         <td><%= link_to 'Edit', edit_prospection_path(prospection) %></td>
