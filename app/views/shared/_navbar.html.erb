@@ -8,27 +8,27 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="/">pKails</a>
+      <%= link_to 'pKails', root_path, class: 'navbar-brand' %>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
-        <li class="active"><%= link_to 'Home', root_path %></li>
-        <li><%= link_to 'Prospections', prospections_path %></li>
+        <%= link_to_in_li 'Home', root_path %>
+        <%= link_to_in_li 'Prospections', prospections_path %>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><%= link_to 'Users', users_path %></li>
-            <li><%= link_to 'Customers', customers_path %></li>
-            <li><%= link_to 'Representatives', representatives_path %></li>
-            <li><%= link_to 'Indications', indications_path %></li>
-            <li><%= link_to 'Regions', regions_path %></li>
+            <%= link_to_in_li 'Users', users_path %>
+            <%= link_to_in_li 'Customers', customers_path %>
+            <%= link_to_in_li 'Representatives', representatives_path %>
+            <%= link_to_in_li 'Indications', indications_path %>
+            <%= link_to_in_li 'Regions', regions_path %>
             <li role="separator" class="divider"></li>
             <li class="dropdown-header">Nav header</li>
-            <li><%= link_to 'Proposal Statuses', proposal_statuses_path %></li>
-            <li><%= link_to 'Reasons', reasons_path %></li>
-            <li><%= link_to 'Activities', activities_path %></li>
-            <li><%= link_to 'Products', products_path %></li>
-            <li><%= link_to 'Departments', departments_path %></li>
+            <%= link_to_in_li 'Proposal Statuses', proposal_statuses_path %>
+            <%= link_to_in_li 'Reasons', reasons_path %>
+            <%= link_to_in_li 'Activities', activities_path %>
+            <%= link_to_in_li 'Products', products_path %>
+            <%= link_to_in_li 'Departments', departments_path %>
           </ul>
         </li>
       </ul>
